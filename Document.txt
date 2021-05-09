@@ -1,0 +1,11 @@
+php artisan make:model Blog -m
+
+
+php artisan make:factory BlogFactory --model=Blog
+#php artisan tinker
+App\Models\Post::factory()->count(10)->create()
+App\Models\User::factory()->count(5)->create()
+php artisan migrate
+
+php artisan serve
+php artisan make:controller BlogController
